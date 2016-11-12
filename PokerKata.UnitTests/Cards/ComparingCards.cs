@@ -1,4 +1,6 @@
 ﻿using FluentAssertions;
+using PokerKata.Cards;
+using PokerKata.Cards.Suits;
 using Xunit;
 
 namespace PokerKata.UnitTests.Cards

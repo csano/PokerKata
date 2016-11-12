@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using FluentAssertions;
+using PokerKata.Cards.Suits;
 using Xunit;
 
 namespace PokerKata.UnitTests.Cards.Suits.StringRepresentation

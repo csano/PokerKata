@@ -1,4 +1,5 @@
 ﻿using System;
+using PokerKata.Cards.Suits;
 
 namespace PokerKata.Cards
 {

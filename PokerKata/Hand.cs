@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using PokerKata.Cards;
 
 namespace PokerKata
 {
@@ -14,19 +14,29 @@ namespace PokerKata
             Cards = new LinkedList<Card>();
         }
 
-        public void Add(Card card)
+        public void Add(Card cardToAdd)
         {
-            Cards.AddFirst(card);
+            if (cardToAdd == null)
+            {
+                return;
+            }
+
+            var current = Cards.First;
+            while (current != null)
+            {
+                if (cardToAdd.CompareTo(current.Value) < 0)
+                {
+                    Cards.AddBefore(current, cardToAdd);
+                    return;
+                }
+                current = current.Next;
+            }
+            Cards.AddLast(cardToAdd);
         }
 
         public override string ToString()
         {
-            var output = new StringBuilder();
-            foreach (var card in Cards)
-            {
-                output.Append($"{card.Value.ToString().ToCharArray().First()}{card.Suit}");
-            }
-            return output.ToString();
+            return string.Join(", ", Cards.Select(card => $"{card.Value.ToString().ToCharArray().First()}{card.Suit}").ToArray());
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace PokerKata.UnitTests.Cards.Suits
+﻿using PokerKata.Cards.Suits;
+
+namespace PokerKata.UnitTests.Cards.Suits
 {
     public class TestSuit : Suit
     {

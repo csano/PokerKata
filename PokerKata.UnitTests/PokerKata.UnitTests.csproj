@@ -82,7 +82,7 @@
     <Compile Include="Cards\Suits\StringRepresentation\TestingSpadeStringRepresentation.cs" />
     <Compile Include="Cards\Suits\StringRepresentation\TestingStringRepresentation.cs" />
     <Compile Include="Cards\Suits\TestSuit.cs" />
-    <Compile Include="Hand.cs" />
+    <Compile Include="AddingCardsToHand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
