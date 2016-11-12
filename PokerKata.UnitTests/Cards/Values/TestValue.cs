@@ -1,6 +1,6 @@
 using PokerKata.Cards;
 
-namespace PokerKata.UnitTests.Cards.Values.Comparing
+namespace PokerKata.UnitTests.Cards.Values
 {
     public class TestValue : Value
     {

@@ -75,7 +75,20 @@
     <Compile Include="Cards\Suits\Equality\TestingDiamondSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingHeartSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingSpadeSuitForEquality.cs" />
-    <Compile Include="Cards\Suits\Equality\TestingSuitForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingAceValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingEightValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingFiveValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingFourValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingJackValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingKingValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingNineValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingQueenValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingSevenValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingSixValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingTenValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingThreeValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingTwoValueForEquality.cs" />
+    <Compile Include="Cards\Values\Equality\TestingValueForEquality.cs" />
     <Compile Include="Cards\Suits\StringRepresentation\TestingClubStringRepresentation.cs" />
     <Compile Include="Cards\Suits\StringRepresentation\TestingDiamondStringRepresentation.cs" />
     <Compile Include="Cards\Suits\StringRepresentation\TestingHeartStringRepresentation.cs" />
@@ -84,9 +97,21 @@
     <Compile Include="Cards\Suits\TestSuit.cs" />
     <Compile Include="AddingCardsToHand.cs" />
     <Compile Include="Cards\Values\Comparing\ComparingAceValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingEightValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingFiveValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingFourValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingJackValue.cs" />
     <Compile Include="Cards\Values\Comparing\ComparingKingValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingNineValue.cs" />
     <Compile Include="Cards\Values\Comparing\ComparingQueenValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingSevenValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingSixValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingTenValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingThreeValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingTwoValue.cs" />
     <Compile Include="Cards\Values\Comparing\ComparingValue.cs" />
+    <Compile Include="Cards\Suits\Equality\TestingSuitForEquality.cs" />
+    <Compile Include="Cards\Values\TestValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

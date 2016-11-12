@@ -7,7 +7,7 @@ namespace PokerKata.UnitTests.Cards.Suits.Equality
     public abstract class TestingSuitForEquality<T> where T: Suit, new()
     {
         [Fact]
-        public void ReturnsTrueWhenSuitsAreBothHearts()
+        public void ReturnsTrueWhenSuitsAreBothTheSame()
         {
             var suit1 = new T();
             var suit2 = new T();
@@ -28,7 +28,7 @@ namespace PokerKata.UnitTests.Cards.Suits.Equality
         }
 
         [Fact]
-        public void ReturnsFalseWhenOneIsHeartsAndTheOtherIsSomethingElse()
+        public void ReturnsFalseWhenOneIsACertainValueAndTheOtherIsSomethingElse()
         {
             var suit1 = new T();
             var suit2 = new TestSuit();

@@ -27,13 +27,12 @@ namespace PokerKata.Cards
 
         public bool Equals(Value other)
         {
-            throw new NotImplementedException();
+            return other != null && ToString().Equals(other.ToString());
         }
 
         public abstract int Rank { get; }
         public abstract override string ToString();
     }
-
 
     public class Card : IEquatable<Card>, IComparable<Card>
     {
