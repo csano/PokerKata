@@ -24,7 +24,7 @@ namespace PokerKata
             var output = new StringBuilder();
             foreach (var card in Cards)
             {
-                output.Append($"{card.CardValue.ToString().ToCharArray().First()}{card.Suit}");
+                output.Append($"{card.Value.ToString().ToCharArray().First()}{card.Suit}");
             }
             return output.ToString();
         }
