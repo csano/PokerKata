@@ -64,7 +64,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Card.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +72,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FiveHandStud\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PokerKata\PokerKata.csproj">
+      <Project>{30AA1099-CEB4-47ED-B10D-426DD84CE372}</Project>
+      <Name>PokerKata</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
