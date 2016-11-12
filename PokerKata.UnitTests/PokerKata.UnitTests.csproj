@@ -131,9 +131,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="FiveHandStud\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PokerKata\PokerKata.csproj">
       <Project>{30AA1099-CEB4-47ED-B10D-426DD84CE372}</Project>

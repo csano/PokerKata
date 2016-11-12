@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using PokerKata.Cards;
 using PokerKata.Cards.Suits;
 using PokerKata.Cards.Values;
@@ -6,6 +7,54 @@ using Xunit;
 
 namespace PokerKata.UnitTests
 {
+    public class AddingCardsToFiveCardStudHand : AddingCardsToHand
+    {
+        [Fact]
+        public void ThrowsHandIsFullExceptionIfAttemptIsMadeToAddMoreThanFiveCardsToHand()
+        {
+            var card1 = new Card(new Ace(), new Diamond());
+            var card2 = new Card(new Ace(), new Diamond());
+            var card3 = new Card(new Ace(), new Diamond());
+            var card4 = new Card(new Ace(), new Diamond());
+            var card5 = new Card(new Ace(), new Diamond());
+            var card6 = new Card(new Ace(), new Diamond());
+
+            var hand = new FiveCardStudHand();
+
+            hand.Add(card1);
+            hand.Add(card2);
+            hand.Add(card3);
+            hand.Add(card4);
+            hand.Add(card5);
+
+            Action a = () => hand.Add(card6);
+
+            a.ShouldThrow<HandIsFullException>();
+        }
+        
+        [Fact]
+        public void CanAddFiveNonNullCardsToHand()
+        {
+            var card1 = new Card(new Ace(), new Diamond());
+            var card2 = new Card(new Ace(), new Diamond());
+            var card3 = new Card(new Ace(), new Diamond());
+            var card4 = new Card(new Ace(), new Diamond());
+            var card5 = new Card(new Ace(), new Diamond());
+
+            var hand = new FiveCardStudHand();
+
+            hand.Add(card1);
+            hand.Add(card2);
+            hand.Add(card3);
+            hand.Add(card4);
+            hand.Add(null);
+
+            Action a = () => hand.Add(card5);
+
+            a.ShouldNotThrow<HandIsFullException>();
+        }
+    }
+
     public class AddingCardsToHand
     {
         [Fact]
@@ -75,5 +124,6 @@ namespace PokerKata.UnitTests
 
             hand.ToString().ShouldBeEquivalentTo("Ac, Ad, Ah, As");
         }
+
     }
 }

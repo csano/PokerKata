@@ -7,14 +7,13 @@ namespace PokerKata
     public class Hand
     {
         public LinkedList<Card> Cards { get; }
-        public int MaxCardCount => 5;
 
         public Hand()
         {
             Cards = new LinkedList<Card>();
         }
 
-        public void Add(Card cardToAdd)
+        public virtual void Add(Card cardToAdd)
         {
             if (cardToAdd == null)
             {
