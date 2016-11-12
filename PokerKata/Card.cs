@@ -31,15 +31,20 @@ namespace PokerKata
 
             if (Value != other.Value)
             {
-                return Value > other.Value ? -1 : 1;
+                return EvaluateForNonZeroReturn(() => Value > other.Value);
             }
 
             if (Suit != other.Suit)
             {
-                return Suit < other.Suit ? -1 : 1;
+                return EvaluateForNonZeroReturn(() => Suit < other.Suit);
             }
 
             return 0;
+        }
+
+        private static int EvaluateForNonZeroReturn(Func<bool> condition)
+        {
+            return condition() ? -1 : 1;
         }
 
         public override bool Equals(object obj)
