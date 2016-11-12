@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PokerKata
+namespace PokerKata.Cards.Suits
 {
     public abstract class Suit : IComparable<Suit>, IEquatable<Suit>
     {

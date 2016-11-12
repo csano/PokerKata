@@ -1,4 +1,7 @@
-﻿namespace PokerKata.UnitTests.Cards.Suits.Equality
+﻿using PokerKata.Cards;
+using PokerKata.Cards.Suits;
+
+namespace PokerKata.UnitTests.Cards.Suits.Equality
 {
     public class TestingClubSuitForEquality : TestingSuitForEquality<Club> { }
 }

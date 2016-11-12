@@ -1,16 +1,16 @@
 ﻿using System;
 
-namespace PokerKata
+namespace PokerKata.Cards
 {
     public class Card : IEquatable<Card>, IComparable<Card>
     {
-        public CardValue CardValue { get; }
+        public CardValue Value { get; }
         public Suit Suit { get; }
 
-        public Card(CardValue cardValue, Suit suit)
+        public Card(CardValue value, Suit suit)
         {
             Suit = suit;
-            CardValue = cardValue;
+            Value = value;
         }
 
         public bool Equals(Card other)
@@ -19,7 +19,7 @@ namespace PokerKata
             {
                 return false;
             }
-            return CardValue == other.CardValue && Suit.Equals(other.Suit);
+            return Value == other.Value && Suit.Equals(other.Suit);
         }
 
         public int CompareTo(Card other)
@@ -29,9 +29,9 @@ namespace PokerKata
                 return -1;
             }
 
-            if (CardValue != other.CardValue)
+            if (Value != other.Value)
             {
-                return EvaluateForNonZeroReturn(() => CardValue > other.CardValue);
+                return EvaluateForNonZeroReturn(() => Value > other.Value);
             }
 
             if (!Suit.Equals(other.Suit))
@@ -56,7 +56,7 @@ namespace PokerKata
         {
             unchecked
             {
-                return ((int) CardValue*397) ^ Suit.GetHashCode();
+                return ((int) Value*397) ^ Suit.GetHashCode();
             }
         }
     }

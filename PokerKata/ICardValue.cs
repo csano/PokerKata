@@ -1,7 +1,4 @@
 namespace PokerKata
 {
-    public interface ICardValue
-    {
-        
-    }
+    public interface ICardValue { }
 }

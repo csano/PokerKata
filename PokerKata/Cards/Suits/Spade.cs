@@ -1,4 +1,4 @@
-namespace PokerKata
+namespace PokerKata.Cards.Suits
 {
     public class Spade : Suit
     {
