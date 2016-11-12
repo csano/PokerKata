@@ -21,7 +21,7 @@ namespace PokerKata
 
     public enum Suit
     {
-        Club,
+        Clubs,
         Diamond,
         Heart,
         Spade
@@ -32,7 +32,7 @@ namespace PokerKata
         public Value Value { get; }
         public Suit Suit { get; }
 
-        public Card(Suit suit, Value value)
+        public Card(Value value, Suit suit)
         {
             Suit = suit;
             Value = value;
@@ -40,7 +40,24 @@ namespace PokerKata
 
         public bool Equals(Card other)
         {
-            throw new NotImplementedException();
+            if (other == null)
+            {
+                return false;
+            }
+            return Value == other.Value && Suit == other.Suit;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((Card) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((int) Value*397) ^ (int) Suit;
+            }
         }
     }
 
