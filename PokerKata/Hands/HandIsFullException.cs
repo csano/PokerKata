@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PokerKata
+namespace PokerKata.Hands
 {
     public class HandIsFullException : Exception { }
 }

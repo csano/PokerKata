@@ -2,7 +2,7 @@
 using System.Linq;
 using PokerKata.Cards;
 
-namespace PokerKata
+namespace PokerKata.Hands
 {
     public class Hand
     {

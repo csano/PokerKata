@@ -61,11 +61,10 @@
     <Compile Include="Cards\Values\Ten.cs" />
     <Compile Include="Cards\Values\Three.cs" />
     <Compile Include="Cards\Values\Two.cs" />
-    <Compile Include="FiveCardStudHand.cs" />
-    <Compile Include="Hand.cs" />
-    <Compile Include="HandIsFullException.cs" />
-    <Compile Include="HandWithLimitOfCards.cs" />
-    <Compile Include="ICardValue.cs" />
+    <Compile Include="Hands\FiveCardStudHand.cs" />
+    <Compile Include="Hands\Hand.cs" />
+    <Compile Include="Hands\HandIsFullException.cs" />
+    <Compile Include="Hands\HandWithLimitOfCards.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

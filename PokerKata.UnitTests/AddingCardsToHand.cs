@@ -3,6 +3,7 @@ using FluentAssertions;
 using PokerKata.Cards;
 using PokerKata.Cards.Suits;
 using PokerKata.Cards.Values;
+using PokerKata.Hands;
 using Xunit;
 
 namespace PokerKata.UnitTests

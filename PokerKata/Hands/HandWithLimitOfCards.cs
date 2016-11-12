@@ -1,6 +1,6 @@
 ﻿using PokerKata.Cards;
 
-namespace PokerKata
+namespace PokerKata.Hands
 {
     public abstract class HandWithLimitOfCards : Hand
     {

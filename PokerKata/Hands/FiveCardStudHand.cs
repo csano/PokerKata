@@ -1,4 +1,4 @@
-﻿namespace PokerKata
+﻿namespace PokerKata.Hands
 {
     public class FiveCardStudHand : HandWithLimitOfCards
     {
