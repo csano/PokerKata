@@ -75,6 +75,7 @@
     <Compile Include="Cards\Suits\Equality\TestingDiamondSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingHeartSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingSpadeSuitForEquality.cs" />
+    <Compile Include="Cards\Suits\StringRepresentation\TestingStringRepresentation.cs" />
     <Compile Include="Cards\Values\Equality\TestingAceValueForEquality.cs" />
     <Compile Include="Cards\Values\Equality\TestingEightValueForEquality.cs" />
     <Compile Include="Cards\Values\Equality\TestingFiveValueForEquality.cs" />
@@ -93,7 +94,6 @@
     <Compile Include="Cards\Suits\StringRepresentation\TestingDiamondStringRepresentation.cs" />
     <Compile Include="Cards\Suits\StringRepresentation\TestingHeartStringRepresentation.cs" />
     <Compile Include="Cards\Suits\StringRepresentation\TestingSpadeStringRepresentation.cs" />
-    <Compile Include="Cards\Suits\StringRepresentation\TestingStringRepresentation.cs" />
     <Compile Include="Cards\Suits\TestSuit.cs" />
     <Compile Include="AddingCardsToHand.cs" />
     <Compile Include="Cards\Values\Comparing\ComparingAceValue.cs" />

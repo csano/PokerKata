@@ -5,10 +5,10 @@ namespace PokerKata.Cards
 {
     public class Card : IEquatable<Card>, IComparable<Card>
     {
-        public CardValue Value { get; }
+        public Value Value { get; }
         public Suit Suit { get; }
 
-        public Card(CardValue value, Suit suit)
+        public Card(Value value, Suit suit)
         {
             Suit = suit;
             Value = value;
@@ -32,7 +32,7 @@ namespace PokerKata.Cards
 
             if (Value != other.Value)
             {
-                return EvaluateForNonZeroReturn(() => Value > other.Value);
+                return Value.CompareTo(other.Value);
             }
 
             if (!Suit.Equals(other.Suit))
@@ -41,11 +41,6 @@ namespace PokerKata.Cards
             }
 
             return 0;
-        }
-
-        private static int EvaluateForNonZeroReturn(Func<bool> condition)
-        {
-            return condition() ? -1 : 1;
         }
 
         public override bool Equals(object obj)
@@ -57,7 +52,7 @@ namespace PokerKata.Cards
         {
             unchecked
             {
-                return ((int) Value*397) ^ Suit.GetHashCode();
+                return Value.GetHashCode() ^ Suit.GetHashCode();
             }
         }
     }

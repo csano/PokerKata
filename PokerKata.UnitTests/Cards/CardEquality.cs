@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using PokerKata.Cards;
 using PokerKata.Cards.Suits;
+using PokerKata.Cards.Values;
 using Xunit;
 
 namespace PokerKata.UnitTests.Cards
@@ -10,7 +11,7 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsFalseIfComparingCardIsNull()
         {
-            var card = new Card(CardValue.Ace, new Club());
+            var card = new Card(new AceValue(), new Club());
 
             var result = card.Equals(null);
 
@@ -20,8 +21,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsTrueIfTwoDifferentCardsAreTheSame()
         {
-            var card1 = new Card(CardValue.Ace, new Club());
-            var card2 = new Card(CardValue.Ace, new Club());
+            var card1 = new Card(new AceValue(), new Club());
+            var card2 = new Card(new AceValue(), new Club());
 
             var result = card1.Equals(card2);
 
@@ -31,7 +32,7 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsTrueIfACardIsComparedToItself()
         {
-            var card = new Card(CardValue.Ace, new Club());
+            var card = new Card(new AceValue(), new Club());
 
             var result = card.Equals(card);
 
@@ -41,8 +42,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsFalseIfTwoCardsAreTheSame()
         {
-            var card1 = new Card(CardValue.Ace, new Club());
-            var card2 = new Card(CardValue.Ace, new Spade());
+            var card1 = new Card(new AceValue(), new Club());
+            var card2 = new Card(new AceValue(), new Spade());
 
             var result = card1.Equals(card2);
 

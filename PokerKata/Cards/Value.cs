@@ -29,6 +29,11 @@ namespace PokerKata.Cards
             return other != null && ToString().Equals(other.ToString());
         }
 
+        public override int GetHashCode()
+        {
+            return ToString().GetHashCode() ^ Rank;
+        }
+
         public abstract int Rank { get; }
         public abstract override string ToString();
     }
