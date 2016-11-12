@@ -36,7 +36,7 @@ namespace PokerKata
 
         public override string ToString()
         {
-            return string.Join(", ", Cards.Select(card => $"{card.Value.ToString().ToCharArray().First()}{card.Suit}").ToArray());
+            return string.Join(", ", Cards.Select(card => $"{card.Value}{card.Suit}").ToArray());
         }
     }
 }
