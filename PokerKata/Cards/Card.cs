@@ -20,7 +20,7 @@ namespace PokerKata.Cards
             {
                 return false;
             }
-            return Value == other.Value && Suit.Equals(other.Suit);
+            return Value.Equals(other.Value) && Suit.Equals(other.Suit);
         }
 
         public int CompareTo(Card other)
