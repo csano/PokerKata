@@ -46,6 +46,7 @@
     <Compile Include="Cards\Suits\Heart.cs" />
     <Compile Include="Cards\Suits\Spade.cs" />
     <Compile Include="Cards\Suits\Suit.cs" />
+    <Compile Include="Cards\Value.cs" />
     <Compile Include="Cards\Values\AceValue.cs" />
     <Compile Include="Cards\Values\EightValue.cs" />
     <Compile Include="Cards\Values\FiveValue.cs" />

@@ -111,6 +111,20 @@
     <Compile Include="Cards\Values\Comparing\ComparingTwoValue.cs" />
     <Compile Include="Cards\Values\Comparing\ComparingValue.cs" />
     <Compile Include="Cards\Suits\Equality\TestingSuitForEquality.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingAceStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingEightStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingFiveStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingFourStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingJackStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingKingStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingNineStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingQueenStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingSevenStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingSixStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingTenStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingThreeStringRepresentation.cs" />
+    <Compile Include="Cards\Values\StringRepresentation\TestingTwoStringRepresentation.cs" />
     <Compile Include="Cards\Values\TestValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
