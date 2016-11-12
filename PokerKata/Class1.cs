@@ -2,12 +2,12 @@
 
 namespace PokerKata
 {
-    public abstract class Hand
+    public class Hand
     {
         public LinkedList<Card> Cards { get; }
-        public abstract int MaxCardCount { get; }
+        public int MaxCardCount => 5;
 
-        private int count;
+        private int currentCount;
 
         protected Hand()
         {
@@ -16,8 +16,9 @@ namespace PokerKata
 
         public void Add(Card card)
         {
-            if (++count < MaxCardCount)
+            if (++currentCount < MaxCardCount)
             {
+
                 
             } 
         }
@@ -26,20 +27,5 @@ namespace PokerKata
         {
             return null;
         }
-    }
-
-    public class TexasHoldEmHand : Hand
-    {
-        public override int MaxCardCount => 2;
-    }
-
-    public class TexasHoldEmHandValidator 
-    {
-
-    }
-
-    public class FiveCardStudHand : Hand
-    {
-        public override int MaxCardCount => 5;
     }
 }

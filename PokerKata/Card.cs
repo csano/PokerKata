@@ -2,7 +2,7 @@
 
 namespace PokerKata
 {
-    public class Card : IEquatable<Card>
+    public class Card : IEquatable<Card>, IComparable<Card>
     {
         public Value Value { get; }
         public Suit Suit { get; }
@@ -20,6 +20,26 @@ namespace PokerKata
                 return false;
             }
             return Value == other.Value && Suit == other.Suit;
+        }
+
+        public int CompareTo(Card other)
+        {
+            if (other == null)
+            {
+                return -1;
+            }
+
+            if (Value != other.Value)
+            {
+                return Value > other.Value ? -1 : 1;
+            }
+
+            if (Suit != other.Suit)
+            {
+                return Suit < other.Suit ? -1 : 1;
+            }
+
+            return 0;
         }
 
         public override bool Equals(object obj)
