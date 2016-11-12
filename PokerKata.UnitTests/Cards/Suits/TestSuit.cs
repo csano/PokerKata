@@ -1,6 +1,6 @@
 ﻿namespace PokerKata.UnitTests.Cards.Suits
 {
-    public class TestCardSuit : CardSuit
+    public class TestSuit : Suit
     {
         public override string ToString()
         {

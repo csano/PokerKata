@@ -9,8 +9,6 @@ namespace PokerKata
         public LinkedList<Card> Cards { get; }
         public int MaxCardCount => 5;
 
-        private int currentCount;
-
         public Hand()
         {
             Cards = new LinkedList<Card>();
@@ -26,7 +24,7 @@ namespace PokerKata
             var output = new StringBuilder();
             foreach (var card in Cards)
             {
-                output.Append($"{card.CardValue}{card.SuitType.ToString().ToCharArray().Take(1).ToString().ToLower()}");
+                output.Append($"{card.CardValue.ToString().ToCharArray().First()}{card.Suit}");
             }
             return output.ToString();
         }

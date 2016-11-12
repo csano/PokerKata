@@ -2,48 +2,14 @@
 
 namespace PokerKata
 {
-    public abstract class CardSuit : IComparable<CardSuit>, IEquatable<CardSuit>
-    {
-        public bool Equals(CardSuit other)
-        {
-            return other != null && ToString().Equals(other.ToString());
-        }
-
-        public override bool Equals(object obj)
-        {
-            return Equals((CardSuit) obj);
-        }
-
-        public int CompareTo(CardSuit other)
-        {
-            if (other == null)
-            {
-                return -1;
-            }
-            return string.Compare(GetType().Name, other.GetType().Name, StringComparison.Ordinal);
-        }
-
-        public abstract override string ToString();
-
-        public override int GetHashCode()
-        {
-            return GetType().Name.GetHashCode();
-        }
-    }
-
-    public interface ICardValue
-    {
-        
-    }
-
     public class Card : IEquatable<Card>, IComparable<Card>
     {
         public CardValue CardValue { get; }
-        public SuitType SuitType { get; }
+        public Suit Suit { get; }
 
-        public Card(CardValue cardValue, SuitType suitTypeType)
+        public Card(CardValue cardValue, Suit suit)
         {
-            SuitType = suitTypeType;
+            Suit = suit;
             CardValue = cardValue;
         }
 
@@ -53,7 +19,7 @@ namespace PokerKata
             {
                 return false;
             }
-            return CardValue == other.CardValue && SuitType == other.SuitType;
+            return CardValue == other.CardValue && Suit.Equals(other.Suit);
         }
 
         public int CompareTo(Card other)
@@ -68,9 +34,9 @@ namespace PokerKata
                 return EvaluateForNonZeroReturn(() => CardValue > other.CardValue);
             }
 
-            if (!SuitType.Equals(other.SuitType))
+            if (!Suit.Equals(other.Suit))
             {
-                return SuitType.CompareTo(other.SuitType);
+                return Suit.CompareTo(other.Suit);
             }
 
             return 0;
@@ -90,7 +56,7 @@ namespace PokerKata
         {
             unchecked
             {
-                return ((int) CardValue*397) ^ (int)SuitType;
+                return ((int) CardValue*397) ^ Suit.GetHashCode();
             }
         }
     }

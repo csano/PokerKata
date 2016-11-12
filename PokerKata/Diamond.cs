@@ -1,6 +1,6 @@
 namespace PokerKata
 {
-    public class Diamond : CardSuit
+    public class Diamond : Suit
     {
         public override string ToString()
         {

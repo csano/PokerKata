@@ -4,7 +4,7 @@ using Xunit;
 
 namespace PokerKata.UnitTests.Cards.Suits.StringRepresentation
 {
-    public abstract class TestingStringRepresentation<T> where T: CardSuit, new()
+    public abstract class TestingStringRepresentation<T> where T: Suit, new()
     {
         [Fact]
         public void ToStringReturnsFirstCharacterOfSuitName()

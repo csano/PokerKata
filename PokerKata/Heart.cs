@@ -1,6 +1,6 @@
 namespace PokerKata
 {
-    public class Heart : CardSuit
+    public class Heart : Suit
     {
         public override string ToString()
         {

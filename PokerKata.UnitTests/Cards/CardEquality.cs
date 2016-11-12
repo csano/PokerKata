@@ -8,7 +8,7 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsFalseIfComparingCardIsNull()
         {
-            var card = new Card(CardValue.Ace, SuitType.Clubs);
+            var card = new Card(CardValue.Ace, new Club());
 
             var result = card.Equals(null);
 
@@ -18,8 +18,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsTrueIfTwoDifferentCardsAreTheSame()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Clubs);
-            var card2 = new Card(CardValue.Ace, SuitType.Clubs);
+            var card1 = new Card(CardValue.Ace, new Club());
+            var card2 = new Card(CardValue.Ace, new Club());
 
             var result = card1.Equals(card2);
 
@@ -29,7 +29,7 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsTrueIfACardIsComparedToItself()
         {
-            var card = new Card(CardValue.Ace, SuitType.Clubs);
+            var card = new Card(CardValue.Ace, new Club());
 
             var result = card.Equals(card);
 
@@ -39,8 +39,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void EqualsMethodReturnsFalseIfTwoCardsAreTheSame()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Clubs);
-            var card2 = new Card(CardValue.Ace, SuitType.Spades);
+            var card1 = new Card(CardValue.Ace, new Club());
+            var card2 = new Card(CardValue.Ace, new Spade());
 
             var result = card1.Equals(card2);
 

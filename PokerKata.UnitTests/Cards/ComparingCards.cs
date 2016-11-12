@@ -8,7 +8,7 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsOneIfCardBeingComparedToIsNull()
         {
-            var card = new Card(CardValue.Ace, SuitType.Spades);
+            var card = new Card(CardValue.Ace, new Spade());
 
             var result = card.CompareTo(null);
 
@@ -18,8 +18,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsOneIfCardBeingComparedToIsLaterInOrderThanCurrentCard()
         {
-            var card1 = new Card(CardValue.King, SuitType.Spades);
-            var card2 = new Card(CardValue.Ace, SuitType.Spades);
+            var card1 = new Card(CardValue.King, new Spade());
+            var card2 = new Card(CardValue.Ace, new Spade());
 
             var result = card1.CompareTo(card2);
 
@@ -29,8 +29,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsNegativeOneIfCardHasSameValueButSmallerSuitThanTheOther()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Clubs);
-            var card2 = new Card(CardValue.Ace, SuitType.Diamonds);
+            var card1 = new Card(CardValue.Ace, new Club());
+            var card2 = new Card(CardValue.Ace, new Diamond());
 
             var result = card1.CompareTo(card2);
 
@@ -40,8 +40,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsNegativeOneIfCardHasLargerValueAndDifferentSuitThanComparingCard()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Clubs);
-            var card2 = new Card(CardValue.King, SuitType.Diamonds);
+            var card1 = new Card(CardValue.Ace, new Club());
+            var card2 = new Card(CardValue.King, new Diamond());
 
             var result = card1.CompareTo(card2);
 
@@ -51,8 +51,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsNegativeOneIfCardHasLargerValueAndSameSuitThanComparingCard()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Diamonds);
-            var card2 = new Card(CardValue.King, SuitType.Diamonds);
+            var card1 = new Card(CardValue.Ace, new Diamond());
+            var card2 = new Card(CardValue.King, new Diamond());
 
             var result = card1.CompareTo(card2);
 
@@ -62,8 +62,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsOneIfCardHasSameValueButLargerSuitThanTheOther()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Diamonds);
-            var card2 = new Card(CardValue.Ace, SuitType.Clubs);
+            var card1 = new Card(CardValue.Ace, new Diamond());
+            var card2 = new Card(CardValue.Ace, new Club());
 
             var result = card1.CompareTo(card2);
 
@@ -73,7 +73,7 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsZeroIfCardIsComparedToItself()
         {
-            var card = new Card(CardValue.Ace, SuitType.Spades);
+            var card = new Card(CardValue.Ace, new Spade());
 
             var result = card.CompareTo(card);
 
@@ -83,8 +83,8 @@ namespace PokerKata.UnitTests.Cards
         [Fact]
         public void ReturnsZeroIfCardIsComparedToOtherCardOfSameSuitAndValue()
         {
-            var card1 = new Card(CardValue.Ace, SuitType.Spades);
-            var card2 = new Card(CardValue.Ace, SuitType.Spades);
+            var card1 = new Card(CardValue.Ace, new Spade());
+            var card2 = new Card(CardValue.Ace, new Spade());
 
             var result = card1.CompareTo(card2);
 

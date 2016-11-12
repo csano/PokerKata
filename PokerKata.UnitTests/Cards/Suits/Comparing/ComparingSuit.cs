@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PokerKata.UnitTests.Cards.Suits.Comparing
 {
-    public abstract class ComparingSuit<T> where T: CardSuit, new()
+    public abstract class ComparingSuit<T> where T: Suit, new()
     {
         [Fact]
         public void ReturnsZeroIfBothAreTheSame()
@@ -29,7 +29,7 @@ namespace PokerKata.UnitTests.Cards.Suits.Comparing
         public void ReturnValueLessThanZeroIfSuitComesBeforeTheOther()
         {
             var suit1 = new T();
-            var suit2 = new TestCardSuit();
+            var suit2 = new TestSuit();
 
             var result = suit1.CompareTo(suit2);
 
@@ -39,7 +39,7 @@ namespace PokerKata.UnitTests.Cards.Suits.Comparing
         [Fact]
         public void ReturnsValueGreaterThanOneIfSuitIsToFollowSuitBeingComparedTo()
         {
-            var suit1 = new TestCardSuit();
+            var suit1 = new TestSuit();
             var suit2 = new T();
 
             var result = suit1.CompareTo(suit2);

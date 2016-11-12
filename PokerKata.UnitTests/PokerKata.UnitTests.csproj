@@ -64,7 +64,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardEquality.cs" />
+    <Compile Include="Cards\CardEquality.cs" />
+    <Compile Include="Cards\ComparingCards.cs" />
     <Compile Include="Cards\Suits\Comparing\ComparingClubs.cs" />
     <Compile Include="Cards\Suits\Comparing\ComparingDiamonds.cs" />
     <Compile Include="Cards\Suits\Comparing\ComparingHearts.cs" />
@@ -75,9 +76,12 @@
     <Compile Include="Cards\Suits\Equality\TestingHeartSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingSpadeSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingSuitForEquality.cs" />
-    <Compile Include="Cards\Suits\TestCardSuit.cs" />
-    <Compile Include="Cards\Suits\TestingStringRepresentation.cs" />
-    <Compile Include="ComparingCards.cs" />
+    <Compile Include="Cards\Suits\StringRepresentation\TestingClubStringRepresentation.cs" />
+    <Compile Include="Cards\Suits\StringRepresentation\TestingDiamondStringRepresentation.cs" />
+    <Compile Include="Cards\Suits\StringRepresentation\TestingHeartStringRepresentation.cs" />
+    <Compile Include="Cards\Suits\StringRepresentation\TestingSpadeStringRepresentation.cs" />
+    <Compile Include="Cards\Suits\StringRepresentation\TestingStringRepresentation.cs" />
+    <Compile Include="Cards\Suits\TestSuit.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -8,7 +8,7 @@ namespace PokerKata.UnitTests
         [Fact]
         public void AddingSingleCardResultsInSingleCardHand()
         {
-            var card = new Card(CardValue.Ace, SuitType.Diamonds);
+            var card = new Card(CardValue.Ace, new Diamond());
             var hand = new Hand();
 
             hand.Add(card);

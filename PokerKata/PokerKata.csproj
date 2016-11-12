@@ -41,13 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="Suit.cs" />
     <Compile Include="Club.cs" />
     <Compile Include="Diamond.cs" />
     <Compile Include="Hand.cs" />
     <Compile Include="Heart.cs" />
+    <Compile Include="ICardValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Spade.cs" />
-    <Compile Include="Suit.cs" />
     <Compile Include="CardValue.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

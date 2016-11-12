@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PokerKata.UnitTests.Cards.Suits.Equality
 {
-    public abstract class TestingSuitForEquality<T> where T: CardSuit, new()
+    public abstract class TestingSuitForEquality<T> where T: Suit, new()
     {
         [Fact]
         public void ReturnsTrueWhenSuitsAreBothHearts()
@@ -30,7 +30,7 @@ namespace PokerKata.UnitTests.Cards.Suits.Equality
         public void ReturnsFalseWhenOneIsHeartsAndTheOtherIsSomethingElse()
         {
             var suit1 = new T();
-            var suit2 = new TestCardSuit();
+            var suit2 = new TestSuit();
 
             var result = suit1.Equals(suit2);
 
