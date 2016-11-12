@@ -83,6 +83,10 @@
     <Compile Include="Cards\Suits\StringRepresentation\TestingStringRepresentation.cs" />
     <Compile Include="Cards\Suits\TestSuit.cs" />
     <Compile Include="AddingCardsToHand.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingAceValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingKingValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingQueenValue.cs" />
+    <Compile Include="Cards\Values\Comparing\ComparingValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
