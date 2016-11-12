@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace PokerKata
 {
@@ -9,23 +11,24 @@ namespace PokerKata
 
         private int currentCount;
 
-        protected Hand()
+        public Hand()
         {
             Cards = new LinkedList<Card>();
         }
 
         public void Add(Card card)
         {
-            if (++currentCount < MaxCardCount)
-            {
-
-                
-            } 
+            Cards.AddFirst(card);
         }
 
         public override string ToString()
         {
-            return null;
+            var output = new StringBuilder();
+            foreach (var card in Cards)
+            {
+                output.Append($"{card.CardValue}{card.SuitType.ToString().ToCharArray().Take(1).ToString().ToLower()}");
+            }
+            return output.ToString();
         }
     }
 }

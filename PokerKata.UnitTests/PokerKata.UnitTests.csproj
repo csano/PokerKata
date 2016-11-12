@@ -65,7 +65,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardEquality.cs" />
+    <Compile Include="Cards\Suits\ComparingSuit.cs" />
+    <Compile Include="Cards\Suits\Equality\TestingClubSuitForEquality.cs" />
+    <Compile Include="Cards\Suits\Equality\TestingDiamondSuitForEquality.cs" />
+    <Compile Include="Cards\Suits\Equality\TestingHeartSuitForEquality.cs" />
+    <Compile Include="Cards\Suits\Equality\TestingSpadeSuitForEquality.cs" />
+    <Compile Include="Cards\Suits\Equality\TestingSuitForEquality.cs" />
+    <Compile Include="Cards\Suits\TestCardSuit.cs" />
+    <Compile Include="Cards\Suits\TestingStringRepresentation.cs" />
     <Compile Include="ComparingCards.cs" />
+    <Compile Include="Hand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

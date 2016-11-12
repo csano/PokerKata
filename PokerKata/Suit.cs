@@ -1,6 +1,6 @@
 ﻿namespace PokerKata
 {
-    public enum Suit
+    public enum SuitType
     {
         Clubs = 1,
         Diamonds,

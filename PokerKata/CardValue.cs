@@ -1,6 +1,6 @@
 ﻿namespace PokerKata
 {
-    public enum Value
+    public enum CardValue
     {
         Two = 2,
         Three = 3,

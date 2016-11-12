@@ -2,15 +2,49 @@
 
 namespace PokerKata
 {
+    public abstract class CardSuit : IComparable<CardSuit>, IEquatable<CardSuit>
+    {
+        public bool Equals(CardSuit other)
+        {
+            return other != null && ToString().Equals(other.ToString());
+        }
+
+        public override bool Equals(object obj)
+        {
+            return Equals((CardSuit) obj);
+        }
+
+        public int CompareTo(CardSuit other)
+        {
+            if (other == null)
+            {
+                return -1;
+            }
+            return string.Compare(GetType().Name, other.GetType().Name, StringComparison.Ordinal);
+        }
+
+        public abstract override string ToString();
+
+        public override int GetHashCode()
+        {
+            return GetType().Name.GetHashCode();
+        }
+    }
+
+    public interface ICardValue
+    {
+        
+    }
+
     public class Card : IEquatable<Card>, IComparable<Card>
     {
-        public Value Value { get; }
-        public Suit Suit { get; }
+        public CardValue CardValue { get; }
+        public SuitType SuitType { get; }
 
-        public Card(Value value, Suit suit)
+        public Card(CardValue cardValue, SuitType suitTypeType)
         {
-            Suit = suit;
-            Value = value;
+            SuitType = suitTypeType;
+            CardValue = cardValue;
         }
 
         public bool Equals(Card other)
@@ -19,7 +53,7 @@ namespace PokerKata
             {
                 return false;
             }
-            return Value == other.Value && Suit == other.Suit;
+            return CardValue == other.CardValue && SuitType == other.SuitType;
         }
 
         public int CompareTo(Card other)
@@ -29,14 +63,14 @@ namespace PokerKata
                 return -1;
             }
 
-            if (Value != other.Value)
+            if (CardValue != other.CardValue)
             {
-                return EvaluateForNonZeroReturn(() => Value > other.Value);
+                return EvaluateForNonZeroReturn(() => CardValue > other.CardValue);
             }
 
-            if (Suit != other.Suit)
+            if (!SuitType.Equals(other.SuitType))
             {
-                return EvaluateForNonZeroReturn(() => Suit < other.Suit);
+                return SuitType.CompareTo(other.SuitType);
             }
 
             return 0;
@@ -56,7 +90,7 @@ namespace PokerKata
         {
             unchecked
             {
-                return ((int) Value*397) ^ (int) Suit;
+                return ((int) CardValue*397) ^ (int)SuitType;
             }
         }
     }
