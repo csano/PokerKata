@@ -65,7 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardEquality.cs" />
-    <Compile Include="Cards\Suits\ComparingSuit.cs" />
+    <Compile Include="Cards\Suits\Comparing\ComparingClubs.cs" />
+    <Compile Include="Cards\Suits\Comparing\ComparingDiamonds.cs" />
+    <Compile Include="Cards\Suits\Comparing\ComparingHearts.cs" />
+    <Compile Include="Cards\Suits\Comparing\ComparingSpades.cs" />
+    <Compile Include="Cards\Suits\Comparing\ComparingSuit.cs" />
     <Compile Include="Cards\Suits\Equality\TestingClubSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingDiamondSuitForEquality.cs" />
     <Compile Include="Cards\Suits\Equality\TestingHeartSuitForEquality.cs" />

@@ -2,13 +2,8 @@
 using FluentAssertions;
 using Xunit;
 
-namespace PokerKata.UnitTests.Cards.Suits
+namespace PokerKata.UnitTests.Cards.Suits.StringRepresentation
 {
-    public class TestingHeartStringRepresentation: TestingStringRepresentation<Heart> { }
-    public class TestingClubStringRepresentation: TestingStringRepresentation<Club> { }
-    public class TestingDiamondStringRepresentation: TestingStringRepresentation<Diamond> { }
-    public class TestingSpadeStringRepresentation: TestingStringRepresentation<Spade> { }
-
     public abstract class TestingStringRepresentation<T> where T: CardSuit, new()
     {
         [Fact]

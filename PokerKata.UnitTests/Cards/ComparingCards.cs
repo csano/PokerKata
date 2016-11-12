@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using Xunit;
 
-namespace PokerKata.UnitTests
+namespace PokerKata.UnitTests.Cards
 {
     public class ComparingCards
     {
