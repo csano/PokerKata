@@ -2,5 +2,5 @@ using PokerKata.Cards.Values;
 
 namespace PokerKata.UnitTests.Cards.Values.Equality
 {
-    public class TestingTenValueForEquality : TestingValueForEquality<TenValue> { }
+    public class TestingTenValueForEquality : TestingValueForEquality<Ten> { }
 }

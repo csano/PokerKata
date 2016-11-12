@@ -1,12 +1,12 @@
 ﻿namespace PokerKata.Cards.Values
 {
-    public class QueenValue : Value
+    public class Ten : Value
     {
-        public override int Rank => 12;
+        public override int Rank => 10;
 
         public override string ToString()
         {
-            return "Q";
+            return "T";
         }
     }
 }

@@ -21,7 +21,7 @@ namespace PokerKata.UnitTests
         [Fact]
         public void AddingSingleCardResultsInSingleCardHand()
         {
-            var card = new Card(new AceValue(), new Diamond());
+            var card = new Card(new Ace(), new Diamond());
             var hand = new Hand();
 
             hand.Add(card);
@@ -32,8 +32,8 @@ namespace PokerKata.UnitTests
         [Fact]
         public void AddingTwoCardsResultsInTwoCardHandInOrder()
         {
-            var card1 = new Card(new KingValue(), new Diamond());
-            var card2 = new Card(new AceValue(), new Diamond());
+            var card1 = new Card(new King(), new Diamond());
+            var card2 = new Card(new Ace(), new Diamond());
             var hand = new Hand();
 
             hand.Add(card1);

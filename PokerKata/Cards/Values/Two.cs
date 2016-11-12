@@ -1,6 +1,6 @@
 ﻿namespace PokerKata.Cards.Values
 {
-    public class TwoValue : NumericalValue
+    public class Two : NumericalValue
     {
         public override int Rank => 2;
     }

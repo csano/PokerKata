@@ -3,7 +3,7 @@ using PokerKata.UnitTests.Cards.Values.StringRepresentation;
 
 namespace PokerKata.UnitTests.Cards.Values.StringRepresentation
 {
-    public class TestingAceStringRepresentation : TestingStringRepresentation<AceValue>
+    public class TestingAceStringRepresentation : TestingStringRepresentation<Ace>
     {
         protected override string StringRepresentation => "A";
     }
