@@ -30,7 +30,7 @@ namespace PokerKata.Cards
                 return -1;
             }
 
-            if (Value != other.Value)
+            if (!Value.Equals(other.Value))
             {
                 return Value.CompareTo(other.Value);
             }

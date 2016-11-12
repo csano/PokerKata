@@ -20,7 +20,7 @@ namespace PokerKata.Cards.Suits
             {
                 return -1;
             }
-            return string.Compare(ToString(), other.ToString(), StringComparison.Ordinal);
+            return string.Compare(ToString(), other.ToString(), StringComparison.OrdinalIgnoreCase);
         }
 
         public abstract override string ToString();
