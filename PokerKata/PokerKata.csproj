@@ -61,6 +61,7 @@
     <Compile Include="Cards\Values\Ten.cs" />
     <Compile Include="Cards\Values\Three.cs" />
     <Compile Include="Cards\Values\Two.cs" />
+    <Compile Include="HandEvaluationEngine.cs" />
     <Compile Include="Hands\FiveCardStudHand.cs" />
     <Compile Include="Hands\Hand.cs" />
     <Compile Include="Hands\HandIsFullException.cs" />

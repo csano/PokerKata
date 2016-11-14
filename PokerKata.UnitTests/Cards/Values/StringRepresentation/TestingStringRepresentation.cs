@@ -7,6 +7,7 @@ namespace PokerKata.UnitTests.Cards.Values.StringRepresentation
     public abstract class TestingStringRepresentation<T> where T: Value, new()
     {
         protected abstract string StringRepresentation { get; }
+
         [Fact]
         public void ToStringReturnsStringRepresentation()
         {
