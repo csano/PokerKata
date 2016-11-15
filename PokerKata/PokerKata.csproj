@@ -66,6 +66,7 @@
     <Compile Include="Hands\Hand.cs" />
     <Compile Include="Hands\HandIsFullException.cs" />
     <Compile Include="Hands\HandWithLimitOfCards.cs" />
+    <Compile Include="LinqExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

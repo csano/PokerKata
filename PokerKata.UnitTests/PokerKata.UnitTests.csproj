@@ -126,6 +126,7 @@
     <Compile Include="Cards\Values\StringRepresentation\TestingThreeStringRepresentation.cs" />
     <Compile Include="Cards\Values\StringRepresentation\TestingTwoStringRepresentation.cs" />
     <Compile Include="Cards\Values\TestValue.cs" />
+    <Compile Include="EvaluatingHandForFlush.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
