@@ -127,6 +127,8 @@
     <Compile Include="Cards\Values\StringRepresentation\TestingTwoStringRepresentation.cs" />
     <Compile Include="Cards\Values\TestValue.cs" />
     <Compile Include="EvaluatingHandForFlush.cs" />
+    <Compile Include="EvaluatingHandForRoyalFlush.cs" />
+    <Compile Include="EvaluatingHandForStraightFlush.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

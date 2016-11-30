@@ -13,6 +13,17 @@ namespace PokerKata.Hands
             Cards = new LinkedList<Card>();
         }
 
+        public Hand(List<Card> cards) : this()
+        {
+            if (cards != null)
+            {
+                foreach (var card in cards)
+                {
+                    Add(card);
+                }
+            }
+        }
+
         public virtual void Add(Card cardToAdd)
         {
             if (cardToAdd == null)
