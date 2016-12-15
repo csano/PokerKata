@@ -52,7 +52,7 @@ namespace PokerKata
                         {
                             bestHand.Add(card);
                         }
-                        return new StraightFlush {Hand = bestHand};
+                        return new StraightFlush { Hand = bestHand };
                     }
                     startIndex++;
                 }
