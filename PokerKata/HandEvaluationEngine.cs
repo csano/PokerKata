@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using PokerKata.Cards;
+﻿using System.Linq;
 using PokerKata.Cards.Values;
 using PokerKata.Hands;
 
@@ -44,20 +41,25 @@ namespace PokerKata
                 while (list.Count - startIndex >= 5)
                 {
                     var newList = list.Take(5).ToList();
-                    if (newList.TakeWhile((x, i) => (i == 0 && newList[i].Value is Ace) || newList[i].Value.Rank == newList[i - 1].Value.Rank - 1).Count() >= 5)
+                    if (
+                        newList.TakeWhile(
+                            (x, i) =>
+                                (i == 0 && newList[i].Value is Ace) ||
+                                newList[i].Value.Rank == newList[i - 1].Value.Rank - 1).Count() >= 5)
                     {
                         var bestHand = new Hand();
                         foreach (var card in newList)
                         {
                             bestHand.Add(card);
                         }
-                        return new StraightFlush { Hand = bestHand };
+                        return new StraightFlush {Hand = bestHand};
                     }
                     startIndex++;
                 }
             }
             return new NullRank();
         }
+    }
 
     public class StraightFlushEvaluator : IRankingEvaluator
     {
@@ -153,4 +155,4 @@ namespace PokerKata
         }
     }
 
-}
+} 
