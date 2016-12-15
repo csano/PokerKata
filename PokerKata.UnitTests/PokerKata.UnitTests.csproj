@@ -129,6 +129,10 @@
     <Compile Include="EvaluatingHandForFlush.cs" />
     <Compile Include="EvaluatingHandForRoyalFlush.cs" />
     <Compile Include="EvaluatingHandForStraightFlush.cs" />
+    <Compile Include="HandRanks\EvaluatingRank.cs" />
+    <Compile Include="HandRanks\EvaluatingStraightFlushRank.cs" />
+    <Compile Include="HandRanks\EvaluatingRoyalFlushRank.cs" />
+    <Compile Include="HandRanks\TestRank.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

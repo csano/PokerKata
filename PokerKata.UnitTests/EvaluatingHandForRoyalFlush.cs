@@ -82,7 +82,7 @@ namespace PokerKata.UnitTests
 
             var result = new RoyalFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ShouldBeEquivalentTo("Ad, Kd, Qd, Jd, Td");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("Ad, Kd, Qd, Jd, Td");
         }
 
         [Fact]
@@ -107,7 +107,7 @@ namespace PokerKata.UnitTests
 
             var result = new RoyalFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ShouldBeEquivalentTo("Ad, Kd, Qd, Td, Jd");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("Ad, Kd, Qd, Jd, Td");
         }
 
         [Fact]
@@ -133,8 +133,7 @@ namespace PokerKata.UnitTests
 
             var result = new RoyalFlushEvaluator().Evaluate(hand);
 
-            result.Should().BeOfType<EvaluationResult>();
-            result.Hand.ShouldBeEquivalentTo("Ad, Kd, Qd, Td, Jd");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("Ad, Kd, Qd, Jd, Td");
         }
     }
 }

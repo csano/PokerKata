@@ -82,7 +82,7 @@ namespace PokerKata.UnitTests
 
             var result = new StraightFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ToString().ShouldBeEquivalentTo("Ad, Kd, Qd, Jd, Td");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("Ad, Kd, Qd, Jd, Td");
         }
 
         [Fact]
@@ -103,7 +103,7 @@ namespace PokerKata.UnitTests
 
             var result = new StraightFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ToString().ShouldBeEquivalentTo("Ad, 5d, 4d, 3d, 2d");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("Ad, 5d, 4d, 3d, 2d");
         }
 
         [Fact]
@@ -128,7 +128,7 @@ namespace PokerKata.UnitTests
 
             var result = new StraightFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ToString().ShouldBeEquivalentTo("Ad, 5d, 4d, 3d, 2d");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("Ad, 5d, 4d, 3d, 2d");
         }
 
         [Fact]
@@ -170,7 +170,7 @@ namespace PokerKata.UnitTests
 
             var result = new StraightFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ToString().ShouldBeEquivalentTo("7d, 6d, 5d, 4d, 3d");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("7d, 6d, 5d, 4d, 3d");
         }
 
         [Fact]
@@ -195,7 +195,7 @@ namespace PokerKata.UnitTests
 
             var result = new StraightFlushEvaluator().Evaluate(hand);
 
-            result.Hand.ToString().ShouldBeEquivalentTo("7d, 6d, 5d, 4d, 3d");
+            result.RankedHand.ToString().ShouldBeEquivalentTo("7d, 6d, 5d, 4d, 3d");
         }
     }
 }
